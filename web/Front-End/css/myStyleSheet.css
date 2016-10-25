@@ -2,5 +2,18 @@
 /* CSS Document */
 
 .navbar-default{
-	background-color: #FF7D28;
+	background-color: #EDEDED;
+}
+
+.navbar-default .navbar-nav > .active{
+	background-color: #FFB783;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus{
+	background-color: #FFB783;
+}
+.footer{
+	background-color: #FFFFFF;
 }

@@ -11,6 +11,35 @@
 	padding: 5px;
 }
 
+.navbar-default{
+	background-color: #EDEDED;
+}
+
+.navbar-default .navbar-nav > .active{
+	background-color: #FFB783;
+}
+
+.navbar-default .navbar-nav > .active > a:hover{
+	background-color: #FFB783;
+}
+
+.nav .navbar-nav .navbar-right{
+	background-color: #EDEDED;
+}
+
+.nav .navbar-nav .navbar-right > .active > a:hover{
+	background-color: #FFB783;
+}
+
+.dropdown-menu > li > a:hover {
+   background-color: #FFB783;
+} 
+
+#btn-submit{
+	margin-top:5%;
+}
+
 .footer{
-	margin-top: 15%;
+	margin-top: 5%;
+	background-color: #EDEDED;
 }

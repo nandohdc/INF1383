@@ -13,9 +13,17 @@
 	background-color: #FFB783;
 }
 
-.form-horizontal{
-	margin-bottom: 20px;
+.nav .navbar-nav .navbar-right{
+	background-color: #EDEDED;
 }
+
+.nav .navbar-nav .navbar-right > .active > a:hover{
+	background-color: #FFB783;
+}
+
+.dropdown-menu > li > a:hover {
+   background-color: #FFB783;
+} 
 
 #btn-submit{
 	margin-top:5%;

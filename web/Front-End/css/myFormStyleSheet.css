@@ -9,11 +9,19 @@
 	background-color: #FFB783;
 }
 
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus{
+.navbar-default .navbar-nav > .active > a:hover{
 	background-color: #FFB783;
 }
+
+.form-horizontal{
+	margin-bottom: 20px;
+}
+
+#btn-submit{
+	margin-top:5%;
+}
+
 .footer{
-	background-color: #FFFFFF;
+	margin-top:5%;
+	background-color: #EDEDED;
 }

@@ -9,6 +9,9 @@
 <!-- Bootstrap -->
 <link href="../../bootstrap/bootstrap-3.3.7/dist/css/bootstrap.css" rel="stylesheet">
 
+<!--My Style Sheet-->
+<link rel="stylesheet" type="text/css" href="../css/myFormStyleSheet.css">
+
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -28,18 +31,21 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="defaultNavbar1">
       <ul class="nav navbar-nav">
-      	<li><a href="http://www.puc-rio.br/respuc">Home</a></li>
-        <li><a href="http://www.puc-rio.br/sobrepuc/admin/vrc/respuc/membros.html">Membros</a></li>
-        <li><a href="http://www.puc-rio.br/sobrepuc/admin/vrc/respuc/acao_comunitaria.html">Ação Comunitária e Trabalho Social</a></li>
-        <li><a href="http://www.puc-rio.br/sobrepuc/admin/vrc/respuc/rondon.html">Projeto Rondon</a></li>
-        <li><a href="http://www.puc-rio.br/sobrepuc/admin/vrc/respuc/doacao.html">Doação</a></li>
-        <li><a href="http://www.puc-rio.br/sobrepuc/admin/vrc/respuc/contato.html">Contato</a></li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cadastro<span class="caret"></span></a>
+      	<li class="active"><a href="http://www.puc-rio.br/respuc">Home</a></li>
+        <li class="active"><a href="http://www.puc-rio.br/sobrepuc/admin/vrc/respuc/membros.html">Membros</a></li>
+        <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cadastro<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="../Front-End/FormAluno.html">Alunos</a></li>
-            <li><a href="#">Instituições e Parceiros</a></li>
+            <li><a href="FormAluno.html">Alunos</a></li>
+            <li><a href="FormInstituicao.html">Instituições e Parceiros</a></li>
           </ul>
         </li>
+        <li class="active"><a href="http://www.puc-rio.br/sobrepuc/admin/vrc/respuc/acao_comunitaria.html">Ação Comunitária e Trabalho Social</a></li>
+        <li class="active"><a href="http://www.puc-rio.br/sobrepuc/admin/vrc/respuc/rondon.html">Projeto Rondon</a></li>
+        <li class="active"><a href="http://www.puc-rio.br/sobrepuc/admin/vrc/respuc/doacao.html">Doação</a></li>
+        <li class="active"><a href="http://www.puc-rio.br/sobrepuc/admin/vrc/respuc/contato.html">Contato</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Área Restrita</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse --> 
@@ -193,49 +199,22 @@
                         <div class="col-sm-5">
                         <input/>
                         </div>
-                     </div>                                                                                  
-            </fieldset>
-       	  <div class="row text-right">
-                    <button type="" class="btn btn-danger">Enviar</button>
-          </div>                                              
+                     </div> 
+                     <div class="row text-center">
+                    	<button type="" class="btn btn-success" id="btn-submit">Enviar</button>
+          			</div>                                                                                   
+            </fieldset>                                            
     </form>
     </div>
-  <div class="row">
-    <div class="text-center col-md-12">
-      <div class="well"><strong> Easily build your page using the Bootstrap components from the Insert panel.</strong></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4 text-center">
-      <h4>Adding <strong>Buttons</strong></h4>
-      <p>Quickly add buttons to your page by using the button component in the insert panel. </p>
-      <button type="button" class="btn btn-info btn-sm">Info Button</button>
-      <button type="button" class="btn btn-success btn-sm">Success Button</button>
-    </div>
-    <div class="text-center col-sm-4">
-      <h4>Adding <strong>Labels</strong></h4>
-      <p>Using the insert panel, add labels to your page by using the label component.</p>
-      <span class="label label-warning">Info Label</span><span class="label label-danger">Danger Label</span> </div>
-    <div class="text-center col-sm-4">
-      <h4>Adding <strong>Glyphicons</strong></h4>
-      <p>You can also add glyphicons to your page from within the insert panel.</p>
-      <div class="row">
-        <div class="col-xs-4"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></div>
-        <div class="col-xs-4"><span class="glyphicon glyphicon-home" aria-hidden="true"> </span> </div>
-        <div class="col-xs-4"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></div>
-      </div>
-    </div>
-  </div>
-  <hr>
-  <div class="row">
-    <div class="text-center col-md-6 col-md-offset-3">
-      <h4>Pontifícia Universidade Católica do Rio de Janeiro</h4>
-      <p>Rua Marquês de São Vicente, 225, Gávea - Rio de Janeiro, RJ - Brasil Cep: 22451-900 - Cx. Postal: 38097 | Telefone: (55 21) 3527-1001</p>
-      <p>Copyright &copy; 2016 &middot; All Rights Reserved PUC-RIO &middot; <a href="../www.puc-rio.br/respuc" > RESPUC - Home</a></p>
-    </div>
-  </div>
-  <hr>
 </div>
+  <footer class="footer"> 
+        <div class="text-center">
+          <h4><a href="http://www.puc-rio.br/index.html">Pontifícia Universidade Católica do Rio de Janeiro</a></h4>
+          <p>Rua Marquês de São Vicente, 225, Gávea - Rio de Janeiro, RJ - Brasil Cep: 22451-900 - Cx. Postal: 38097 | Telefone: (55 21) 3527-1001</p>
+          <p>Copyright &copy; 2016 &middot; All Rights Reserved PUC-RIO &middot; <a href="../www.puc-rio.br/respuc" > RESPUC - Home</a></p>
+        </div>
+      <hr>
+  </footer>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 <script src="../../bootstrap/bootstrap-3.3.7/dist/js/jquery-1.11.3.min.js"></script>
 

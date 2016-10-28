@@ -124,7 +124,7 @@
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="example-url-input" class="col-xs-2 col-form-label">Turno Disponívelr</label>
+                  <label for="example-url-input" class="col-xs-2 col-form-label">Turno Disponível</label>
                   <div class="col-xs-10">
                     <input class="form-control" type="text" placeholder="Exemplo: DETRAN" id="example-url-input">
                   </div>
@@ -139,6 +139,13 @@
                   <label for="example-password-input" class="col-xs-2 col-form-label">Status Inscrição</label>
                   <div class="col-xs-10">
 					<input class="form-control" type="text" placeholder="Exemplo: aprovado, em andamento, aprovada." id="example-tel-input">
+                  </div>
+                </div>
+                  <div class="form-group row">
+                  <label for="example-password-input" class="col-xs-2 col-form-label">IP do Usuário:</label>
+                  <div class="col-xs-10">
+                	<input type="text" value="<?= $_SERVER["REMOTE_ADDR"];?>" name="IPUsertxt" readonly id="ipUsu"/>
+                </label>
                   </div>
                 </div>
             </fieldset>

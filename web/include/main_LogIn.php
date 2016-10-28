@@ -1,6 +1,6 @@
 <!-- main.php -->
 <div class="container">
-	<form action="LogIn.php" method="POST" class="form-signin">
+	<form action="../Front-End/include/LogIn.php" method="POST" class="form-signin">
 		<h2 class="form-signin-heading">Área Restrita - RESPUC</h2>
 		<label for="login" class="sr-only">Email address</label>
         <input type="text" name="logintxt" id="login" value="<?= @$_COOKIE['email'];?>" class="form-control" placeholder="Email address" required autofocus>

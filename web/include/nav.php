@@ -11,8 +11,8 @@
         <li class="active"><a href="http://www.puc-rio.br/sobrepuc/admin/vrc/respuc/membros.html">Membros</a></li>
         <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cadastro<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="../../index.php">Alunos</a></li>
-            <li><a href="/Front-End/CadastroInstituicao/index_Instituicao.php">Instituições e Parceiros</a></li>
+            <li><a href="../index.php">Alunos</a></li>
+            <li><a href="/CadastroInstituicao/index_Instituicao.php">Instituições e Parceiros</a></li>
           </ul>
         </li>
         <li class="active"><a href="http://www.puc-rio.br/sobrepuc/admin/vrc/respuc/acao_comunitaria.html">Ação Comunitária e Trabalho Social</a></li>
@@ -21,7 +21,7 @@
         <li class="active"><a href="http://www.puc-rio.br/sobrepuc/admin/vrc/respuc/contato.html">Contato</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="/Front-End/LogIn/index_LogIn.php">Área Restrita</a></li>
+        <li class="active"><a href="/LogIn/index_LogIn.php">Área Restrita</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse --> 

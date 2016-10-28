@@ -15,16 +15,16 @@
     <link href="Front-End/include/signin.css" rel="stylesheet">
     
     <!--My Style Sheet-->
-    <link rel="stylesheet" type="text/css" href="Front-End/css/myFormStyleSheet.css">
+    <link rel="stylesheet" type="text/css" href="css/myFormStyleSheet.css">
 </head>
 <body>
 
 <!-- Including header.php, nav.php, main.php & footer.php -->
 <?php 
 include('header_index.php');
-include('Front-End/include/nav.php');
-include ('Front-End/include/FormAluno.php');
-include('Front-End/include/footer.php');
+include('include/nav.php');
+include ('include/FormAluno.php');
+include('include/footer.php');
  ?>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 <script src="bootstrap/bootstrap-3.3.7/dist/js/jquery-1.11.3.min.js"></script>

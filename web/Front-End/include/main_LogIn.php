@@ -1,9 +1,9 @@
 <!-- main.php -->
 <div class="container">
-	<form action="" method="" class="form-signin">
+	<form action="LogIn.php" method="POST" class="form-signin">
 		<h2 class="form-signin-heading">Área Restrita - RESPUC</h2>
 		<label for="login" class="sr-only">Email address</label>
-        <input type="txt" name="logintxt" id="login" class="form-control" placeholder="Email address" required autofocus>
+        <input type="text" name="logintxt" id="login" value="<?= @$_COOKIE['email'];?>" class="form-control" placeholder="Email address" required autofocus>
         <label for="password" class="sr-only">Password</label>
         <input type="password" name="passwordtxt" id="password" class="form-control" placeholder="Password" required>
         <div class="checkbox">

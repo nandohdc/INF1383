@@ -31,6 +31,12 @@ if(!isset($_SESSION['logado'])) {
 include ("../../Front-End/include/header.php");
 include ("../../Front-End/include/nav.php");
 
+if($option == 'grafico'){
+	
+}
+else if($option == 'tabela'){
+
+}
 
 
 include ("../../Front-End/include/footer.php");

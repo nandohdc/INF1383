@@ -1,3 +1,7 @@
+<?php
+	//require '../includes/server/modulos/FormInstituicao_add.php';
+?>
+
 <!-- This page is log in page to have acess to restricted area. -->
 <!DOCTYPE html>
 <html lang="pt-br">

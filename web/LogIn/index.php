@@ -9,10 +9,10 @@
     <link href="../bootstrap/bootstrap-3.3.7/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../Front-End/LogIn/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../LogIn/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../Front-End/LogIn/Front-End/include/signin.css" rel="stylesheet">
+    <link href="../LogIn/Front-End/include/signin.css" rel="stylesheet">
     
     <!--My Style Sheet-->
     <link rel="stylesheet" type="text/css" href="../css/myLogInStyleSheet.css">

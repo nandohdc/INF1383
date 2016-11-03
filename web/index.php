@@ -22,7 +22,7 @@
 <!-- Including header.php, nav.php, main.php & footer.php -->
 <?php 
 include('header_index.php');
-include('include/nav.php');
+include('nav_index.php');
 include ('include/FormAluno.php');
 include('include/footer.php');
  ?>

@@ -17,29 +17,21 @@ if(!isset($_SESSION['logado'])) {
     <link href="../../bootstrap/bootstrap-3.3.7/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../Front-End/LogIn/arearestrita/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../../LogIn/arearestrita/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../../Front-End/LogIn/arearestrita/Front-End/include/signin.css" rel="stylesheet">
+    <link href="../../LogIn/arearestrita/Front-End/include/signin.css" rel="stylesheet">
     
     <!--My Style Sheet-->
-    <link rel="stylesheet" type="text/css" href="../../Front-End/css/myFormStyleSheet.css">
+    <link rel="stylesheet" type="text/css" href="../../css/consultaStyleSheet.css">
 </head>
 
 <body>
 <?php 
-include ("../../Front-End/include/header.php");
-include ("../../Front-End/include/nav.php");
-
-if($option == 'grafico'){
-	
-}
-else if($option == 'tabela'){
-
-}
-
-
-include ("../../Front-End/include/footer.php");
+include ("../../include/header.php");
+include ("../../include/nav.php");
+include("../../include/main_arearestrita.php");
+include ("../../include/footer.php");
 ?>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 

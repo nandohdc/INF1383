@@ -25,10 +25,10 @@ $sql= "SELECT username, password FROM login WHERE username='$login' AND password
 //echo $sql; die;
 
 //envia a query
-$affected_rows = $connection->executeRead($sql);
+$result = $connection->executeRead($sql);
 
 //4º Passo - Verificando se a consulta retornou resultado
-if($affected_rows){
+if(pg_num_rows($result) > 0){
 	
 	$register = pg_fetch_array($affected_rows, PGSQL_ASSOC);
 	//$name = $feedback['nome']; //inserir de acordo com bd criado

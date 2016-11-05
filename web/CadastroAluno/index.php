@@ -3,21 +3,27 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
-	<title>RESPUC - Log In Area</title>
+	<title>RESPUC - Cadastro Aluno</title>
 	<meta name="author" content="Fernando Homem da Costa" />
      <!-- Bootstrap core CSS -->
     <link href="../bootstrap/bootstrap-3.3.7/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../Front-End/include/signin.css" rel="stylesheet">
     
     <!--My Style Sheet-->
-    <link rel="stylesheet" type="text/css" href="../include/css/myLogInStyleSheet.css">
+    <link rel="stylesheet" type="text/css" href="../include/css/myFormStyleSheet.css">
 </head>
 <body>
 
 <!-- Including header.php, nav.php, main.php & footer.php -->
 <?php 
-include ('../include/header.php');
+include('../include/header.php');
 include('../include/nav.php');
-include ('../include/main_LogIn.php');
+include ('../include/FormAluno.php');
 include('../include/footer.php');
  ?>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 

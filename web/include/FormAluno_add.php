@@ -5,7 +5,6 @@ if(isset($_POST['submit'])){
 	$data_missing = array();
 	
 	if(empty($_POST['nome'])){
-		
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'Nome Completo';
 		
@@ -16,7 +15,6 @@ if(isset($_POST['submit'])){
 	}
 	
 	if(empty($_POST['cpf'])){
-		
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'CPF';
 		
@@ -27,7 +25,6 @@ if(isset($_POST['submit'])){
 	}
 	
 	if(empty($_POST['identidade'])){
-		
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'Identidade';
 		
@@ -38,7 +35,6 @@ if(isset($_POST['submit'])){
 	}
 	
 	if(empty($_POST['o_emissor'])){
-		
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'Orgao Emissor';
 		
@@ -49,7 +45,6 @@ if(isset($_POST['submit'])){
 	}
 	
 	if(empty($_POST['matricula'])){
-		
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'Matricula';
 		
@@ -60,7 +55,6 @@ if(isset($_POST['submit'])){
 	}
 	
 	if(empty($_POST['genero'])){
-		
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'Genero';
 		
@@ -71,7 +65,6 @@ if(isset($_POST['submit'])){
 	}
 	
 	if(empty($_POST['dt_nascimento'])){
-		
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'Data de Nascimento';
 		
@@ -82,7 +75,6 @@ if(isset($_POST['submit'])){
 	}
 	
 	if(empty($_POST['periodo'])){
-		
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'Periodo';
 		
@@ -92,8 +84,7 @@ if(isset($_POST['submit'])){
 		
 	}
 	
-		if(empty($_POST['email'])){
-		
+	if(empty($_POST['email'])){
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'E-mail';
 		
@@ -104,7 +95,6 @@ if(isset($_POST['submit'])){
 	}
 
 	if(empty($_POST['rua'])){
-		
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'Rua';
 		
@@ -115,7 +105,6 @@ if(isset($_POST['submit'])){
 	}
 	
 	if(empty($_POST['complemento'])){
-		
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'Complemento';
 		
@@ -126,7 +115,6 @@ if(isset($_POST['submit'])){
 	}
 	
 	if(empty($_POST['bairro'])){
-		
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'Bairro';
 		
@@ -137,7 +125,6 @@ if(isset($_POST['submit'])){
 	}
 	
 	if(empty($_POST['cidade'])){
-		
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'Cidade';
 		
@@ -148,7 +135,6 @@ if(isset($_POST['submit'])){
 	}
 	
 	if(empty($_POST['uf'])){
-		
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'UF';
 		
@@ -159,7 +145,6 @@ if(isset($_POST['submit'])){
 	}
 	
 	if(empty($_POST['cep'])){
-		
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'CEP';
 		
@@ -169,8 +154,27 @@ if(isset($_POST['submit'])){
 		
 	}
 	
-	if(empty($_POST['nome_projeto'])){
+	if(empty($_POST['telefone_fixo'])){
+		//adiciona o nome do campo nao preenchido
+		$data_missing[] = 'Telefone Fixo';
 		
+	} else{
+		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
+		$telefone_fixo = trim($_POST['telefone_fixo']);
+		
+	}
+	
+	if(empty($_POST['celular'])){
+		//adiciona o nome do campo nao preenchido
+		$data_missing[] = 'Celular';
+		
+	} else{
+		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
+		$celular = trim($_POST['celular']);
+		
+	}
+	
+	if(empty($_POST['nome_projeto'])){
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'Nome do Projeto';
 		
@@ -181,7 +185,6 @@ if(isset($_POST['submit'])){
 	}
 	
 	if(empty($_POST['como_conheceu'])){
-		
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'Como Conheceu';
 		
@@ -190,20 +193,70 @@ if(isset($_POST['submit'])){
 		$como_conheceu = trim($_POST['como_conheceu']);
 		
 	}
+
+	if(isset($_POST['segunda'])){
+		$dias_disponiveis = trim($_POST['segunda']);
+	}
 	
-	if(empty($_POST['dias_disponiveis'])){
-		
+	else{
+		$dias_disponiveis .= null;
+	}
+	
+	if(isset($_POST['terca'])){
+		$dias_disponiveis .= trim($_POST['terca']);
+	}
+	
+	else{
+		$dias_disponiveis .= null;
+	}
+	
+	if(isset($_POST['quarta'])){
+		$dias_disponiveis .= trim($_POST['quarta']);
+	}
+	
+	else{
+		$dias_disponiveis .= null;
+	}
+	
+	if(isset($_POST['quinta'])){
+		$dias_disponiveis .= trim($_POST['quinta']);
+	}
+	
+	else{
+		$dias_disponiveis .= null;
+	}
+	
+	if(isset($_POST['sexta'])){
+		$dias_disponiveis .= trim($_POST['sexta']);
+	}
+	
+	else{
+		$dias_disponiveis .= null;
+	}
+	
+	if(isset($_POST['sabado'])){
+		$dias_disponiveis .= trim($_POST['sabado']);
+	}
+	
+	else{
+		$dias_disponiveis .= null;
+	}
+	
+	if(isset($_POST['domingo'])){
+		$dias_disponiveis .= trim($_POST['domingo']);
+	}
+	
+	else{
+		$dias_disponiveis .= null;
+	}
+	
+	if(empty($dias_disponiveis)){
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'Dias Disponiveis';
-		
-	} else{
-		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
-		$dias_disponiveis = trim($_POST['dias_disponiveis']);
 		
 	}
 	
 	if(empty($_POST['turno_disponivel'])){
-		
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'Turno Disponivel';
 		
@@ -214,7 +267,6 @@ if(isset($_POST['submit'])){
 	}
 	
 	if(empty($_POST['dt_inscricao'])){
-		
 		//adiciona o nome do campo nao preenchido
 		$data_missing[] = 'Data de Inscricao';
 		
@@ -225,7 +277,6 @@ if(isset($_POST['submit'])){
 	}
 	
 	if(empty($_POST['ipuser'])){
-		
 		//adiciona o nome do campo nao preenchido
 		//$data_missing[] = 'CEP';
 		
@@ -235,6 +286,8 @@ if(isset($_POST['submit'])){
 		
 	}	
 	
+	echo 'oi';die;
+	
 	if(empty($data_missing)){
 
 		require_once('../SqlManager.class.php');
@@ -243,14 +296,16 @@ if(isset($_POST['submit'])){
 		$connection = new SqlManager("connect");
 		
 		//montar a query
-		$sqlAluno = "INSERT INTO aluno(nome, cpf, identidade, o_emissor, matricula, genero, dt_nascimento, periodo, email, rua, complemento, bairro, cidade, uf, cep) VALUE('$nome', '$cpf', '$identidade', '$o_emissor', '$matricula', '$genero', '$dt_nascimento', '$periodo', '$email', '$rua', '$complemento', '$bairro', '$cidade', '$uf', '$cep')";
+		$sqlAluno = "INSERT INTO aluno(nome, cpf, identidade, o_emissor, matricula, genero, dt_nascimento, periodo, email, rua, complemento, bairro, cidade, uf, cep, telefone_fixo, celular) VALUE('$nome', '$cpf', '$identidade', '$o_emissor', '$matricula', '$genero', '$dt_nascimento', '$periodo', '$email', '$rua', '$complemento', '$bairro', '$cidade', '$uf', '$cep', '$telefone_fixo', '$celular')";
+		
+		echo '$sqlAluno';die;
 		
 		//$sqlInscricao = "INSERT INTO inscricao(razao_social, nome_fantasia, email_instituicao, nome_RP, email_RP, ano_fundacao, website, vinculo, rua, complemento, bairro, cidade, uf, cep) VALUE('$nome_projeto', '$como_conheceu', '$dias_disponiveis', '$turno_disponivel', '$data_inscricao', '$status_inscricao')";
 		
+		
+		
 		$affected_rows1 = $connection->executeCommand($sqlAluno);
 		//$affected_rows2 = $connection->executeCommand($sqlInscricao);
-		
-	}
 	
 	if($affected_rows1 > 0){
 	
@@ -274,13 +329,14 @@ if(isset($_POST['submit'])){
 	
 	}*/
 	
-} else{
+	} else{
 	
-	echo 'Voce preicsa preencher as seguintes informacoes<br />';
-        
-        foreach($data_missing as $missing){
+		echo 'Voce preicsa preencher as seguintes informacoes<br />';
+    	    
+       		foreach($data_missing as $missing){
             
-            echo "$missing<br />";
+            	echo "$missing<br />";
+			}
 		}
 }
 ?>

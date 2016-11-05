@@ -11,7 +11,7 @@
         <li class="active"><a href="http://www.puc-rio.br/sobrepuc/admin/vrc/respuc/membros.html">Membros</a></li>
         <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cadastro<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="index.php">Alunos</a></li>
+            <li><a href="CadastroAluno/index.php">Alunos</a></li>
             <li><a href="CadastroInstituicao/index.php">Instituições e Parceiros</a></li>
           </ul>
         </li>

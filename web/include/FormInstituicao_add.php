@@ -59,6 +59,17 @@ if(isset($_POST['submit'])){
 		
 	}
 	
+	if(empty($_POST['qtd_membros'])){
+		
+		//adiciona o nome do campo nao preenchido
+		$data_missing[] = 'Quantidade de Membros';
+		
+	} else{
+		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
+		$qtd_membros = trim($_POST['qtd_membros']);
+		
+	}	
+	
 	if(empty($_POST['ano_fundacao'])){
 		
 		//adiciona o nome do campo nao preenchido
@@ -156,7 +167,29 @@ if(isset($_POST['submit'])){
 		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
 		$cep = trim($_POST['cep']);
 		
+	}
+
+	if(empty($_POST['telefone_fixo'])){
+		
+		//adiciona o nome do campo nao preenchido
+		$data_missing[] = 'Telefone fixo';
+		
+	} else{
+		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
+		$telefone_fixo = trim($_POST['telefone_fixo']);
+		
 	}	
+
+	if(empty($_POST['celular'])){
+		
+		//adiciona o nome do campo nao preenchido
+		$data_missing[] = 'Celular';
+		
+	} else{
+		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
+		$celular= trim($_POST['celular']);
+		
+	}		
 	
 	if(empty($data_missing)){
 		
@@ -166,19 +199,12 @@ if(isset($_POST['submit'])){
 		$connection = new SqlManager("connect");
 		
 		//montar a query
-		$sql = "INSERT INTO instituicao(nome_fantasia, razao_social, ano_fundacao, website, vinculo, qtd_membros, nome_rp, email_rp, email_instituicao, rua, complemento, bairro, cidade, uf, cep) VALUES('$nome_fantasia', '$razao_social', '$ano_fundacao', '$website', '$vinculo', '$qtd_membros', '$nome_RP', '$email_RP', '$email_instituicao', '$rua', '$complemento', '$bairro', '$cidade', '$uf', '$cep', '$telefone_fixo', '$celular')";
+		$sql = "INSERT INTO instituicao(nome_fantasia, razao_social, ano_fundacao, website, vinculo, qtd_membros, nome_rp, email_rp, email_instituicao, rua, complemento, bairro, cidade, uf, cep, telefone_fixo, celular) VALUES('$nome_fantasia', '$razao_social', '$ano_fundacao', '$website', '$vinculo', '$qtd_membros', '$nome_RP', '$email_RP', '$email_instituicao', '$rua', '$complemento', '$bairro', '$cidade', '$uf', '$cep', '$telefone_fixo', '$celular')";
 		
-		echo $query; die;
+		//echo $sql; die;
+		
 		$affected_rows = $connection->executeCommand($sql);
 		
-	}
-	
-	if(!$affected_rows){
-		
-		echo 'Query não executada - Retorno vazio\n';
-		
-	}
-	
 	if($affected_rows > 0){
 	
 		$connection->closeConnection();
@@ -198,5 +224,6 @@ if(isset($_POST['submit'])){
             
             echo "$missing<br />";
 		}
+	}
 }
 ?>

@@ -1,7 +1,4 @@
-<html>
-  <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
+<script type="text/javascript">
       google.charts.load('current', {'packages':['table']});
       google.charts.setOnLoadCallback(drawTable);
 
@@ -21,9 +18,5 @@
 
         table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
       }
-    </script>
-  </head>
-  <body>
-    <div id="table_div"></div>
-  </body>
-</html>
+</script>
+<div id="table_div"></div>

@@ -1,5 +1,5 @@
 <div class="container">
-    <form method="post" action="include/FormAluno_add.php" role="" class="form-horizontal">
+    <form method="post" action="../include/FormAluno_add.php" role="" class="form-horizontal">
         <div class="row">
             <fieldset>
                 <legend>Informações Pessoais</legend>
@@ -22,21 +22,22 @@
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="example-url-input" class="col-xs-2 col-form-label">Órgão Emissor</label>
+                  <label for="example-text-input" class="col-xs-2 col-form-label">Órgão Emissor</label>
                   <div class="col-xs-10">
                     <input class="form-control" name="o_emissor" type="text" placeholder="Exemplo: DETRAN" id="example-text-input">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="example-tel-input" class="col-xs-2 col-form-label">Matrícula</label>
+                  <label for="example-number-input" class="col-xs-2 col-form-label">Matrícula</label>
                   <div class="col-xs-10">
-                    <input class="form-control" name="matricula" type="number" min="1" placeholder="Exemplo: xxxxxxx" id="example-text-input">
+                    <input class="form-control" name="matricula" type="number" min="1" placeholder="Exemplo: xxxxxxx" id="example-number-input">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="example-password-input" class="col-xs-2 col-form-label">Gênero</label>
+                  <label for="example-select-input" class="col-xs-2 col-form-label">Gênero</label>
                   <div class="col-xs-10">
                        <select name="genero" class="form-control" id="">
+                      		<option value="">Selecione</option>
                        		<option value="masculino">Masculino</option>
                        		<option value="feminino">Feminino</option>
                             <option value="outro">Outro</option>
@@ -138,7 +139,7 @@
                 <div class="form-group row">
                   <label for="example-tel-input" class="col-xs-2 col-form-label">Celular</label>
                   <div class="col-xs-10">
- 					<input class="form-control" name="telefone_fixo" type="text" placeholder="Exemplo: (xx)xxxx-xxxx" id="example-tel-input">
+ 					<input class="form-control" name="celular" type="text" placeholder="Exemplo: (xx)xxxx-xxxx" id="example-tel-input">
                   </div>
                 </div>
             </fieldset>
@@ -159,13 +160,13 @@
                 <div class="form-group row">
                   <label for="example-checkbox-input" class="col-xs-2 col-form-label">Dias Disponiveis</label>
                   <div class="col-xs-10">
-                    <input type="checkbox" name="dias_disponiveis" value="segunda"> Segunda-Feira<br><br>
-					<input type="checkbox" name="vehicle" value="terca"> Terça-Feira<br><br>
-                    <input type="checkbox" name="dias_disponiveis" value="quarta"> Quarta-Feira<br><br>
-					<input type="checkbox" name="vehicle" value="quinta"> Quinta-Feira<br><br>
-                    <input type="checkbox" name="dias_disponiveis" value="sexta"> Sexta-Feira<br><br>
-					<input type="checkbox" name="vehicle" value="sabado"> Sábado<br><br>
-                    <input type="checkbox" name="dias_disponiveis" value="domingo"> Domingo<br><br>
+                    <input type="checkbox" name="segunda" value="segunda"> Segunda-Feira<br><br>
+					<input type="checkbox" name="terca" value="terca"> Terça-Feira<br><br>
+                    <input type="checkbox" name="quarta" value="quarta"> Quarta-Feira<br><br>
+					<input type="checkbox" name="quinta" value="quinta"> Quinta-Feira<br><br>
+                    <input type="checkbox" name="sexta" value="sexta"> Sexta-Feira<br><br>
+					<input type="checkbox" name="sabado" value="sabado"> Sábado<br><br>
+                    <input type="checkbox" name="domingo" value="domingo"> Domingo<br><br>
                   </div>
                 </div>
                 <div class="form-group row">

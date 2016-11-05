@@ -34,6 +34,12 @@
                   </div>
                 </div>
                 <div class="form-group row">
+                  <label for="example-text-input" class="col-xs-2 col-form-label">Quantidade de Membros:</label>
+                  <div class="col-xs-10">
+					<input class="form-control" name="qtd_membros" type="number" placeholder="Exemplo: 1,2,3,.." id="example-text-input">
+                  </div>
+                </div>                
+                <div class="form-group row">
                   <label for="example-text-input" class="col-xs-2 col-form-label">Ano de Fundação:</label>
                   <div class="col-xs-10">
 					<input class="form-control" name="ano_fundacao" type="text" placeholder="Exemplo: xxxxx" id="example-text-input">
@@ -128,7 +134,7 @@
                 <div class="form-group row">
                   <label for="example-tel-input" class="col-xs-2 col-form-label">Celular</label>
                   <div class="col-xs-10">
- 					<input class="form-control" name="telefone_fixo" type="text" placeholder="Exemplo: (xx)xxxx-xxxx" id="example-tel-input">
+ 					<input class="form-control" name="celular" type="text" placeholder="Exemplo: (xx)xxxx-xxxx" id="example-tel-input">
                   </div>
                 </div>
                 <div class="form-group row">

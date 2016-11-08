@@ -14,9 +14,6 @@ var _EmailInstituiçãoObrigatorio = 'Campo E-mail Instituição Obrigatório.';
 var _QtdMembrosObrigatorio = 'Campo Quantidade de Membros Obrigatório.';
 var _AnoFundacaoObrigatorio = 'Campo Ano de Fundação Obrigatório.';
 var _VínculoObrigatorio = 'Campo Vínculo Obrigatório';
-var _SenhaObrigatorio = 'Campo Senha Obrigatório';
-var _ConfirmaSenhaObrigatorio = 'Campo Confirma a Senha Obrigatório';
-var _SenhaDiferenteObrigatorio = 'Senhas Diferentes';
 
 //Inscrição
 var _DtInscricaoObrigatorio = 'Campo Data de Inscrição Obrigatório.';

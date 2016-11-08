@@ -8,8 +8,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>RESPUC - Cadastro Instituição</title>
 	<meta name="author" content="Fernando Homem da Costa" />
+	
+	<title>RESPUC - Cadastro Instituição</title>
      <!-- Bootstrap core CSS -->
     <link href="../bootstrap/bootstrap-3.3.7/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
     
@@ -34,6 +35,7 @@
   	<script src="../include/js/validaEMAIL.js" type="text/javascript"></script>
   	<script src="../include/js/validaEMAILEXISTENTE.js" type="text/javascript"></script>
   	<script src="../include/js/controller-cadastroInstituicao.js" type="text/javascript"></script>
+  	
 </head>
 <body>
 

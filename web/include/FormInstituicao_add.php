@@ -198,6 +198,9 @@ if(isset($_POST['submit'])){
 		//criando conexao
 		$connection = new SqlManager("connect");
 		
+		//testo para ver se a instituição já está criada em nossa base de dados
+		$checkInstituicao = "SELECT nome_fantasia, razao_social, email_instituicao FROM instituicao WHERE razao_social = '$razao_social' AND nome_fantasia = '$nome_fantasia' AND email_instituicao = '$email_instituicao'";
+		
 		//montar a query
 		$sql = "INSERT INTO instituicao(nome_fantasia, razao_social, ano_fundacao, website, vinculo, qtd_membros, nome_rp, email_rp, email_instituicao, rua, complemento, bairro, cidade, uf, cep, telefone_fixo, celular) VALUES('$nome_fantasia', '$razao_social', '$ano_fundacao', '$website', '$vinculo', '$qtd_membros', '$nome_RP', '$email_RP', '$email_instituicao', '$rua', '$complemento', '$bairro', '$cidade', '$uf', '$cep', '$telefone_fixo', '$celular')";
 		

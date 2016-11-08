@@ -7,16 +7,11 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>RESPUC - Cadastro Instituição</title>
 	<meta name="author" content="Fernando Homem da Costa" />
      <!-- Bootstrap core CSS -->
     <link href="../bootstrap/bootstrap-3.3.7/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../Front-End/CadastroInstituicao/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="../Front-End/CadastroInstituicao/Front-End/include/signin.css" rel="stylesheet">
     
     <!--My Style Sheet-->
     <link rel="stylesheet" type="text/css" href="../include/css/myFormStyleSheet.css">

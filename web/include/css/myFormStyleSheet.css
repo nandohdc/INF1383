@@ -29,7 +29,32 @@
 	margin-top:5%;
 }
 
+.obrigatorio {
+
+	color: #F00;
+	padding-left: 10px;
+
+}
+
 .footer{
 	margin-top:5%;
 	background-color: #EDEDED;
+}
+
+.focus{
+	background-color: lightyellow;
+}
+
+.required{
+	background-color: lightcoral;
+}
+
+.normal{
+	background-color: white;
+}
+
+#divRetornoMsg{
+	font-size: 1.1em;
+	color: #F00;
+	margin: 7px 0;
 }

@@ -3,19 +3,35 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>RESPUC - Cadastro Aluno</title>
 	<meta name="author" content="Fernando Homem da Costa" />
+    
      <!-- Bootstrap core CSS -->
     <link href="../bootstrap/bootstrap-3.3.7/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="../bootstrap/bootstrap-3.3.7/dist/js/jquery-1.11.3.min.js"></script>
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="../Front-End/include/signin.css" rel="stylesheet">
+	<!-- Include all compiled plugins (below), or include individual files as needed --> 
+	<script src="../bootstrap/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+   
+     <!-- jQuery 3.1.1 -->
+	<script src="../include/js/jquery-3.1.1.js" type="text/javascript"></script>
     
     <!--My Style Sheet-->
     <link rel="stylesheet" type="text/css" href="../include/css/myFormStyleSheet.css">
+    
+    <!-- My Javascript -->
+    <script src="../include/js/mensagens_pt-br.js" type="text/javascript"></script>
+	<script src="../include/js/funcoes-view.js" type="text/javascript"></script>
+ 	<script src="../include/js/valida-cadastroAluno.js" type="text/javascript"></script>
+  	<script src="../include/js/validaCPF.js" type="text/javascript"></script>
+  	<script src="../include/js/validaDTNASC.js" type="text/javascript"></script>
+  	<script src="../include/js/validaEMAIL.js" type="text/javascript"></script>
+  	<script src="../include/js/validaEMAILEXISTENTE.js" type="text/javascript"></script>
+  	<script src="../include/js/controller-cadastroAluno.js" type="text/javascript"></script>
+  	
 </head>
 <body>
 
@@ -26,10 +42,6 @@ include('../include/nav.php');
 include ('../include/FormAluno.php');
 include('../include/footer.php');
  ?>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="../bootstrap/bootstrap-3.3.7/dist/js/jquery-1.11.3.min.js"></script>
 
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="../bootstrap/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
 </body>
 </html>

@@ -54,7 +54,7 @@
                 <div class="form-group row">
                   <label for="example-text-input" class="col-xs-2 col-form-label">Vínculo:</label>
                   <div class="col-xs-10">
-                    <textarea name="vinculo" maxlength="150" class="form-control" rows="3"></textarea>
+                    <textarea name="vinculo" maxlength="150" class="form-control" id="vinculo" rows="3"></textarea>
                   </div>
                 </div>
             </fieldset>
@@ -63,25 +63,25 @@
                 <div class="form-group row">
                   <label for="example-text-input" class="col-xs-2 col-form-label">Rua</label>
                   <div class="col-xs-10">
-                    <input class="form-control" name="rua" type="text" placeholder="Digite o nome da rua." id="example-text-input">
+                    <input class="form-control" name="rua" type="text" placeholder="Digite o nome da rua." id="rua">
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="example-text-input" class="col-xs-2 col-form-label">Complemento</label>
                   <div class="col-xs-10">
-                    <input class="form-control" name="complemento" type="text" placeholder="Digite o complemento da instituição." id="example-text-input">
+                    <input class="form-control" name="complemento" type="text" placeholder="Digite o complemento da instituição." id="complemento">
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="example-text-input" class="col-xs-2 col-form-label">Bairro</label>
                   <div class="col-xs-10">
-                    <input class="form-control" name="bairro" type="text" placeholder="Digite o bairro onde a instituição se situa." id="example-text-input">
+                    <input class="form-control" name="bairro" type="text" placeholder="Digite o bairro onde a instituição se situa." id="bairro">
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="example-text-input" class="col-xs-2 col-form-label">Cidade</label>
                   <div class="col-xs-10">
-                    <input class="form-control" name="cidade" type="url" placeholder="Digite a cidade onde a instituição se situa." id="example-text-input">
+                    <input class="form-control" name="cidade" type="text" placeholder="Digite a cidade onde a instituição se situa." id="cidade">
                   </div>
                 </div>
                 <div class="form-group row">
@@ -122,19 +122,19 @@
                 <div class="form-group row">
                   <label for="example-text-input" class="col-xs-2 col-form-label">CEP</label>
                   <div class="col-xs-10">
- 					<input class="form-control" name="cep" type="text" placeholder="Exemplo: xxxxx-xxx" id="example-text-input">
+ 					<input class="form-control" name="cep" type="text" placeholder="Exemplo: xxxxx-xxx" id="cep">
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="example-tel-input" class="col-xs-2 col-form-label">Telefone Fixo</label>
                   <div class="col-xs-10">
- 					<input class="form-control" name="telefone_fixo" type="text" placeholder="Exemplo: (xx)xxxx-xxxx" id="example-tel-input">
+ 					<input class="form-control" name="telefone_fixo" type="text" placeholder="Exemplo: (xx)xxxx-xxxx" id="telefonefixo">
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="example-tel-input" class="col-xs-2 col-form-label">Celular</label>
                   <div class="col-xs-10">
- 					<input class="form-control" name="celular" type="text" placeholder="Exemplo: (xx)xxxx-xxxx" id="example-tel-input">
+ 					<input class="form-control" name="celular" type="text" placeholder="Exemplo: (xx)xxxx-xxxx" id="celular">
                   </div>
                 </div>
                 <div class="form-group row">
@@ -145,6 +145,11 @@
                   </div>
                 </div>
             </fieldset>
+                <div id="divRetornoMsg">
+          			 <?php 
+             			echo str_replace('-', " ", @$_GET['msg']);
+              		?>                    
+				</div>
              <div class="row text-center">
                <button type="submit" name="submit" class="btn btn-success" id="btn-submit">Enviar</button>
             </div> 

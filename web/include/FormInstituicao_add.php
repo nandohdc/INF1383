@@ -36,7 +36,7 @@ if(isset($_POST['submit'])){
 		$email_instituicao = trim($_POST['email_instituicao']);
 		
 	}
-	
+	/*
 	if(empty($_POST['nome_RP'])){
 		
 		//adiciona o nome do campo nao preenchido
@@ -57,7 +57,7 @@ if(isset($_POST['submit'])){
 		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
 		$email_RP = trim($_POST['email_RP']);
 		
-	}
+	}*/
 	
 	if(empty($_POST['qtd_membros'])){
 		
@@ -217,13 +217,14 @@ if(isset($_POST['submit'])){
 	}
 	
 } else{
-	
-	echo 'Voce preicsa preencher as seguintes informacoes<br />';
+		
+	$intro = "Voce preicsa preencher as seguintes informacoes<br/>";
+	echo $intro;
         
         foreach($data_missing as $missing){
-            
-            echo "$missing<br />";
+            $intro .= ($missing."<br/>"."-");
 		}
+		header("Location: ../CadastroInstituicao/index.php?msg=$intro");
 	}
 }
 ?>

@@ -13,9 +13,6 @@
         </div>
         <div id="divRetornoMsg">
            <?php 
-              // if(isset($_GET['msg'])) {
-             //     echo str_replace('-', ' ', $_GET['msg']);
-             // }
              echo str_replace('-', ' ', @$_GET['msg']); 
               ?>                    
         </div>

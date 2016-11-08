@@ -330,13 +330,12 @@ if(isset($_POST['submit'])){
 	}*/
 	
 	} else{
-	
-		echo 'Voce preicsa preencher as seguintes informacoes<br />';
-    	    
+		$intro = 'Voce preicsa preencher as seguintes informacoes<br />';
+		echo $intro;
        		foreach($data_missing as $missing){
-            
-            	echo "$missing<br />";
+            	echo $missing .="$missing<br />";
 			}
+			header("Location: ../CadastroAluno/index.php?msg='$intro.$missing'");
 		}
 }
 ?>

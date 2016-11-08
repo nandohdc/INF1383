@@ -3,6 +3,7 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>RESPUC - Log In Area</title>
 	<meta name="author" content="Fernando Homem da Costa" />
      <!-- Bootstrap core CSS -->

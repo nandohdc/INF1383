@@ -22,15 +22,22 @@ $connection = new SqlManager("connect");
 //montar a query
 $sql= "SELECT username, password FROM login WHERE username='$login' AND password='$password'";
 
-//echo $sql; die;
 
 //envia a query
 $result = $connection->executeRead($sql);
 
+//var_dump($connection);
+//var_dump($result); 
+
+$bool_controle = false;
+foreach($result as $feedback)
+$bool_controle = true;
+	//var_dump($feedback);
+	//var_dump($bobo = $feedback["username"]);
+
 //4º Passo - Verificando se a consulta retornou resultado
-if(pg_num_rows($result) > 0){
-	
-	$register = pg_fetch_array($affected_rows, PGSQL_ASSOC);
+if($bool_controle){
+	//
 	//$name = $feedback['nome']; //inserir de acordo com bd criado
 	$username = $feedback['username']; //inserir de acordo com bd criado
 	//$codUser = $feedback['codUser']; //inserir de acordo com bd criado
@@ -48,7 +55,7 @@ if($StatusLogIn){
 	
 	//Crio as variáveis de log de acesso - resgistramos toda pessoa que logga na area restrita
 	$_SESSION['LoggedIn'] = true;
-	$_SESSION['nome'] = $name;
+	//$_SESSION['nome'] = $name;
 	$_SESSION['username'] = $username;
 	
 	//varaveis Dia e hora/Ip do usuario para o log de acesso
@@ -56,7 +63,7 @@ if($StatusLogIn){
 	$ipUser = $_SERVER['REMOTE_ADDR'];
 	
 	//Cria e grava no arquivo que irá armazenar o as informações.
-	$arquivo = fopen("log-$nome.txt","a+");
+	$arquivo = fopen("log-$username.txt","a+");
 	fwrite($arquivo, $linhaTxt);
 	fclose($arquivo);
 

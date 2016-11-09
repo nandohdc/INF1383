@@ -36,11 +36,11 @@ if(isset($_POST['submit'])){
 		$email_instituicao = trim($_POST['email_instituicao']);
 		
 	}
-	/*
+	
 	if(empty($_POST['nome_RP'])){
 		
 		//adiciona o nome do campo nao preenchido
-		$data_missing[] = 'Nome do Relacoes Publicas';
+		$nome_RP = $_POST['nome_RP'];
 		
 	} else{
 		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
@@ -50,14 +50,13 @@ if(isset($_POST['submit'])){
 	
 	if(empty($_POST['email_RP'])){
 		
-		//adiciona o nome do campo nao preenchido
-		$data_missing[] = 'E-mail Relacoes Publicas';
+		$email_RP = $_POST['email_RP'];
 		
 	} else{
 		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
 		$email_RP = trim($_POST['email_RP']);
 		
-	}*/
+	}
 	
 	if(empty($_POST['qtd_membros'])){
 		
@@ -182,8 +181,7 @@ if(isset($_POST['submit'])){
 
 	if(empty($_POST['celular'])){
 		
-		//adiciona o nome do campo nao preenchido
-		$data_missing[] = 'Celular';
+		$celular = trim($_POST['celular']);
 		
 	} else{
 		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
@@ -201,23 +199,35 @@ if(isset($_POST['submit'])){
 		//testo para ver se a instituição já está criada em nossa base de dados
 		$checkInstituicao = "SELECT nome_fantasia, razao_social, email_instituicao FROM instituicao WHERE razao_social = '$razao_social' AND nome_fantasia = '$nome_fantasia' AND email_instituicao = '$email_instituicao'";
 		
+		$result = $connection->executeRead($checkInstituicao);
+		
+		$bool_controle = true;//Se nao tiver no banco de dados
+		foreach($result as $feedback)
+		$bool_controle = false;//Se tiver no banco de dados
+		
+		if($bool_controle){
+			
 		//montar a query
 		$sql = "INSERT INTO instituicao(nome_fantasia, razao_social, ano_fundacao, website, vinculo, qtd_membros, nome_rp, email_rp, email_instituicao, rua, complemento, bairro, cidade, uf, cep, telefone_fixo, celular) VALUES('$nome_fantasia', '$razao_social', '$ano_fundacao', '$website', '$vinculo', '$qtd_membros', '$nome_RP', '$email_RP', '$email_instituicao', '$rua', '$complemento', '$bairro', '$cidade', '$uf', '$cep', '$telefone_fixo', '$celular')";
 		
-		//echo $sql; die;
-		
 		$affected_rows = $connection->executeCommand($sql);
 		
-	if($affected_rows > 0){
-	
-		$connection->closeConnection();
+			if($affected_rows > 0){
+
+			$connection->closeConnection();
+			header("Location: ../CadastroInstituicao/index.php?msg=Instituicao-cadastrada-com-sucesso");	
+
+			} else{
+
+			echo 'Error Occurred - SQL';
+			$connection->closeConnection();
+
+			}
+		}
 		
-	} else{
-	
-		echo 'Error Occurred - SQL';
-		$connection->closeConnection();
-	
-	}
+		else{
+			header("Location: ../CadastroInstituicao/index.php?msg=Instituicao-ja-cadastrada");
+		}
 	
 } else{
 		

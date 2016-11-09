@@ -1,5 +1,5 @@
 <div class="container">
-	<form method="post" action="../include/FormInstituicao_add.php" role="" class="form-horizontal">
+	<form method="post" action="../include/FormInstituicao_add.php" id="formInstituicao" role="" class="form-horizontal">
 		<div class="row">
 			<fieldset>
 				<legend>Informações Institucionais</legend>

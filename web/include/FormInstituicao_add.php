@@ -40,7 +40,7 @@ if(isset($_POST['submit'])){
 	if(empty($_POST['nome_RP'])){
 		
 		//adiciona o nome do campo nao preenchido
-		$nome_RP = $_POST['nome_RP'];
+		$nome_RP = trim($_POST['nome_RP']);
 		
 	} else{
 		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
@@ -50,7 +50,7 @@ if(isset($_POST['submit'])){
 	
 	if(empty($_POST['email_RP'])){
 		
-		$email_RP = $_POST['email_RP'];
+		$email_RP = trim($_POST['email_RP']);
 		
 	} else{
 		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
@@ -201,15 +201,11 @@ if(isset($_POST['submit'])){
 		
 		$result = $connection->executeRead($checkInstituicao);
 		
-		$bool_controle = true;//Se nao tiver no banco de dados
-		foreach($result as $feedback)
-		$bool_controle = false;//Se tiver no banco de dados
-		
-		if($bool_controle){
+		if(!$result){
 			
 		//montar a query
-		$sql = "INSERT INTO instituicao(nome_fantasia, razao_social, ano_fundacao, website, vinculo, qtd_membros, nome_rp, email_rp, email_instituicao, rua, complemento, bairro, cidade, uf, cep, telefone_fixo, celular) VALUES('$nome_fantasia', '$razao_social', '$ano_fundacao', '$website', '$vinculo', '$qtd_membros', '$nome_RP', '$email_RP', '$email_instituicao', '$rua', '$complemento', '$bairro', '$cidade', '$uf', '$cep', '$telefone_fixo', '$celular')";
-		
+		$sql = "INSERT INTO Instituicao(nome_fantasia, razao_social, ano_de_fundacao, site, vinculo, qtd_membros, relacoes_publicas, email_relacoes_publicas, rua, complemento, bairro, cidade, uf, cep, telefone_fixo, celular, email) VALUES('$nome_fantasia', '$razao_social', '$ano_fundacao', '$website', '$vinculo', '$qtd_membros', '$nome_RP', '$email_RP', '$rua', '$complemento', '$bairro', '$cidade', '$uf', '$cep', '$telefone_fixo', '$celular','$email_instituicao')";		
+			
 		$affected_rows = $connection->executeCommand($sql);
 		
 			if($affected_rows > 0){

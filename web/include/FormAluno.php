@@ -51,9 +51,9 @@
 								<div class="col-xs-10">
 									<select name="genero" class="form-control" id="">
 										<option value="">Selecione</option>
-										<option value="masculino">Masculino</option>
-										<option value="feminino">Feminino</option>
-										<option value="outro">Outro</option>
+										<option value="Masculino">Masculino</option>
+										<option value="Feminino">Feminino</option>
+										<option value="Outro">Outro</option>
 									</select>
 								</div>
 							</div>
@@ -274,36 +274,12 @@
 							<div class="col-xs-10">
 								<select class="form-control" name="turno_disponivel" id="turno_disponivel">
 									<option value="">Selecione o turno</option>
-									<option value="manha">Manhã</option>
-									<option value="tarde">Tarde</option>
-									<option value="noite">Noite</option>
+									<option value="Manhã">Manhã</option>
+									<option value="Tarde">Tarde</option>
+									<option value="Noite">Noite</option>
 								</select>
 							</div>
 						</div>
-						<div class="form-group row">
-							<div class="col-xs-2">
-								<label for="example-text-input" id="labeldatainscricao" class="col-form-label">Data de Inscrição<span class="obrigatorio">*</span>
-					  </div>
-					  <div class="col-xs-10">
-						<input class="form-control" name="dt_inscricao" type="text" placeholder="Exemplo: xx/xx/xxxxx" id="dtinscricao">
-					  </div>
-                  </label>
-							</div>
-							<div class="form-group row">
-								<div class="col-xs-2">
-									<label for="example-text-input" class="col-form-label">Status Inscrição</label>
-								</div>
-								<div class="col-xs-10">
-									<input class="form-control" name="status_inscricao" type="hidden" value="Em Análise" id="status_inscricao">
-								</div>
-							</div>
-							<div class="form-group row">
-								<label for="example-password-input" class="col-xs-2 col-form-label">IP do Usuário:</label>
-								<div class="col-xs-10">
-									<input type="hidden" value="<?= $_SERVER[" REMOTE_ADDR "];?>" name="ipuser" readonly id="ipUsu"/>
-									</label>
-								</div>
-							</div>
 			</fieldset>
 			<div id="divRetornoMsg">
 				<?php 

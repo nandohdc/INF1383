@@ -5,44 +5,44 @@
 				<legend>Informações Institucionais</legend>
 				<div class="form-group row">
 					<div class="col-xs-2">
-						<label for="example-text-input" label="labelrazaosocial" class="col-xs-2 col-form-label">Razão Social<span class="obrigatorio">*</span>
+						<label for="example-text-input" label="labelrazaosocial" class="col-xs-3 col-form-label">Razão Social<span class="obrigatorio">*</span>
                   </div>
-					  <div class="col-xs-10">
+					  <div class="col-xs-9">
 						<input class="form-control" type="text" name="razao_social"placeholder="Digite a razão social." id="razaosocial">
 					  </div>
                   </label>
 					</div>
 					<div class="form-group row">
 						<div class="col-xs-2">
-							<label for="example-text-input" label="labelnomefantasia" class="col-xs-2 col-form-label">Nome Fantasia</label>
+							<label for="example-text-input" label="labelnomefantasia" class="col-xs-3 col-form-label">Nome Fantasia</label>
 						</div>
-						<div class="col-xs-10">
+						<div class="col-xs-9">
 							<input class="form-control" type="text" name="nome_fantasia" placeholder="Digite o nome fantasia" id="nomefantasia">
 						</div>
 					</div>
 					<div class="form-group row">
 						<div class="col-xs-2">
-							<label for="example-email-input" label="labelemailinstituicao" class="col-xs-2 col-form-label">E-mail da Instiuição:<span class="obrigatorio">*</span>
+							<label for="example-email-input" label="labelemailinstituicao" class="col-xs-3 col-form-label">E-mail da Instiuição:<span class="obrigatorio">*</span>
                   </div>
-					  <div class="col-xs-10">
+					  <div class="col-xs-9">
 						<input class="form-control" name="email_instituicao" type="email" placeholder="Digite o e-mail da instituição" id="emailinstituicao">
 					  </div>
                   </label>
 						</div>
 						<div class="form-group row">
 							<div class="col-xs-2">
-								<label for="example-text-input" label="labelnomerp" class="col-xs-2 col-form-label">Nome do Relações Públicas:
+								<label for="example-text-input" label="labelnomerp" class="col-xs-3 col-form-label">Nome do Relações Públicas:
                   </div>
-                  <div class="col-xs-10">
+                  <div class="col-xs-9">
                     <input class="form-control" name="nome_RP" type="text" placeholder="Digite o nome do Relações Públicas" id="nomerp">
                   </div>
                   </label>
 							</div>
 							<div class="form-group row">
 								<div class="col-xs-2">
-									<label for="example-email-input" label="labelemailrp" class="col-xs-2 col-form-label">E-mail do Relações Puúblicas:
+									<label for="example-email-input" label="labelemailrp" class="col-xs-3 col-form-label">E-mail do Relações Puúblicas:
                   </div>
-                  <div class="col-xs-10">
+                  <div class="col-xs-9">
                     <input class="form-control" name="email_RP" type="email" placeholder="Digite o e-mail do Relações Públicas" id="emailrp">
                   </div>
                   </label>
@@ -123,39 +123,42 @@
                   </label>
 								</div>
 								<div class="form-group row">
-									<label for="example-tel-input" class="col-xs-2 col-form-label">UF</label>
-									<div class="col-xs-10">
-										<select class="form-control" name="uf" id="">
-											<option value="">Selecione</option>
-											<option value="AC">Acre</option>
-											<option value="AL">Alagoas</option>
-											<option value="AP">Amapá</option>
-											<option value="AM">Amazonas</option>
-											<option value="BA">Bahia</option>
-											<option value="CE">Ceará</option>
-											<option value="DF">Distrito Federal</option>
-											<option value="ES">Espirito Santo</option>
-											<option value="GO">Goiás</option>
-											<option value="MA">Maranhão</option>
-											<option value="MS">Mato Grosso do Sul</option>
-											<option value="MT">Mato Grosso</option>
-											<option value="MG">Minas Gerais</option>
-											<option value="PA">Pará</option>
-											<option value="PB">Paraíba</option>
-											<option value="PR">Paraná</option>
-											<option value="PE">Pernambuco</option>
-											<option value="PI">Piauí</option>
-											<option value="RJ">Rio de Janeiro</option>
-											<option value="RN">Rio Grande do Norte</option>
-											<option value="RS">Rio Grande do Sul</option>
-											<option value="RO">Rondônia</option>
-											<option value="RR">Roraima</option>
-											<option value="SC">Santa Catarina</option>
-											<option value="SP">São Paulo</option>
-											<option value="SE">Sergipe</option>
-											<option value="TO">Tocantins</option>
-										</select>
-									</div>
+								<div class="col-xs-2">
+									<label for="example-select-input" class="col-xs-2 col-form-label">UF
+										</div>
+										<div class="col-xs-10">
+											<select class="form-control" name="uf" id="">
+												<option value="">Selecione</option>
+												<option value="AC">Acre</option>
+												<option value="AL">Alagoas</option>
+												<option value="AP">Amapá</option>
+												<option value="AM">Amazonas</option>
+												<option value="BA">Bahia</option>
+												<option value="CE">Ceará</option>
+												<option value="DF">Distrito Federal</option>
+												<option value="ES">Espirito Santo</option>
+												<option value="GO">Goiás</option>
+												<option value="MA">Maranhão</option>
+												<option value="MS">Mato Grosso do Sul</option>
+												<option value="MT">Mato Grosso</option>
+												<option value="MG">Minas Gerais</option>
+												<option value="PA">Pará</option>
+												<option value="PB">Paraíba</option>
+												<option value="PR">Paraná</option>
+												<option value="PE">Pernambuco</option>
+												<option value="PI">Piauí</option>
+												<option value="RJ">Rio de Janeiro</option>
+												<option value="RN">Rio Grande do Norte</option>
+												<option value="RS">Rio Grande do Sul</option>
+												<option value="RO">Rondônia</option>
+												<option value="RR">Roraima</option>
+												<option value="SC">Santa Catarina</option>
+												<option value="SP">São Paulo</option>
+												<option value="SE">Sergipe</option>
+												<option value="TO">Tocantins</option>
+											</select>
+										</div>
+								</label>
 								</div>
 								<div class="form-group row">
 									<div class="col-xs-2">
@@ -183,13 +186,6 @@
 						<input class="form-control" name="celular" type="text" placeholder="Exemplo: (xx)xxxx-xxxx" id="celular">
 					  </div>
                   </label>
-											</div>
-											<div class="form-group row">
-												<label for="example-text-input" class="col-xs-2 col-form-label">IP do Usuário:</label>
-												<div class="col-xs-10">
-													<input type="hidden" value="<?= $_SERVER[" REMOTE_ADDR "];?>" name="IPUsertxt" readonly id="ipUsu"/>
-													</label>
-												</div>
 											</div>
 			</fieldset>
 			<div id="divRetornoMsg">

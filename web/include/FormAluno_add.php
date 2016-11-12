@@ -26,7 +26,7 @@ if ( isset( $_POST['submit'] ) ) {
 
 	if ( empty( $_POST[ 'identidade' ] ) ) {
 		//adiciona o nome do campo nao preenchido
-		$data_missing[] = 'Identidade';
+		$identidade = '';
 
 	} else {
 		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
@@ -36,7 +36,7 @@ if ( isset( $_POST['submit'] ) ) {
 
 	if ( empty( $_POST[ 'o_emissor' ] ) ) {
 		//adiciona o nome do campo nao preenchido
-		$data_missing[] = 'Orgao Emissor';
+		$o_emissor = '';
 
 	} else {
 		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
@@ -186,7 +186,7 @@ if ( isset( $_POST['submit'] ) ) {
 
 	if ( empty( $_POST[ 'celular' ] ) ) {
 		//adiciona o nome do campo nao preenchido
-		$data_missing[] = 'Celular';
+		$celular = '';
 
 	} else {
 		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
@@ -233,37 +233,11 @@ if ( isset( $_POST['submit'] ) ) {
 
 	}
 
-	if ( empty( $_POST[ 'dt_inscricao' ] ) ) {
-		//adiciona o nome do campo nao preenchido
-		$data_missing[] = 'Data de Inscricao';
-
-	} else {
-		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
-		$data_inscricao = trim( $_POST[ 'dt_inscricao' ] );
-
-	}
-	
-	if ( empty( $_POST[ 'status_inscricao' ] ) ) {
-		//adiciona o nome do campo nao preenchido
-		$data_missing[] = 'Status de Inscricao';
-
-	} else {
-		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
-		$status_inscricao = trim( $_POST[ 'status_inscricao' ] );
-
-	}
-
-	if ( empty( $_POST[ 'ipuser' ] ) ) {
-		//adiciona o nome do campo nao preenchido
-		//$data_missing[] = 'CEP';
-
-	} else {
-		//Caso a informacao tenha sido preenchida corretamente, armazenamos numa variavel.
-		$ipuser = trim( $_POST[ 'ipuser' ] );
-
-	}
-
 	if ( empty( $data_missing ) ) {
+		//Não está faltando informação do cadastro, podemos enviar o form
+		//Toda inscrição começa com status 'Em Análise'
+		$status_inscricao = 'Em Análise';
+		$data_inscricao = date("m-d-Y");
 
 		require_once( '../SqlManager.class.php' );
 
@@ -279,25 +253,21 @@ if ( isset( $_POST['submit'] ) ) {
 		if (!$result) {//O aluno não está inscrito e pode se inscrever
 
 			//montar a query - para tabela aluno
-			$sqlAluno = "INSERT INTO aluno(nome, cpf, identidade, o_emissor, matricula, genero, periodo, dt_nascimento,idioma, nome_curso, rua, complemento, bairro, cidade, uf, cep, telefone_fixo, celular, email) VALUE('$nome', '$cpf', '$identidade', '$o_emissor', '$matricula', '$genero', '$periodo', '$dt_nascimento','$idioma', '$nome_curso', '$rua', '$complemento', '$bairro', '$cidade', '$uf', '$cep', '$telefone_fixo', '$celular','$email')";
-
+			$sqlAluno = "INSERT INTO aluno(nome, cpf, identidade, o_emissor, matricula, genero, periodo, dt_nascimento,idioma, nome_curso, rua, complemento, bairro, cidade, uf, cep, telefone_fixo, celular, email) VALUES('$nome', '$cpf', '$identidade', '$o_emissor', '$matricula', '$genero', '$periodo', '$dt_nascimento','$idioma', '$nome_curso', '$rua', '$complemento', '$bairro', '$cidade', '$uf', '$cep', '$telefone_fixo', '$celular','$email')";
+			
 			//montar a query - para tabela inscricao
-			$sqlInscricao = "INSERT INTO inscricao(dias_disponiveis, turno_disponivel, como_conheceu, status_inscricao, data_inscricao, nome_projeto, cpf_aluno) VALUE('$nome_projeto', '$como_conheceu', '$dias_disponiveis', '$turno_disponivel','$status_inscricao','$data_inscricao','$nome_projeto','$cpf')";
+			$sqlInscricao ="INSERT INTO inscricao(dias_disponiveis, turno_disponivel, como_conheceu, status_inscricao, dt_inscricao, nome_projeto, cpf_aluno) VALUES('$dias_disponiveis', '$turno_disponivel', '$como_conheceu','$status_inscricao','$data_inscricao','$nome_projeto','$cpf')";
 
 			//Executa as queries
 			$affected_rows1 = $connection->executeCommand($sqlAluno);
-			//echo $sqlAluno;
-			//die();
-			//$affected_rows2 = $connection->executeCommand($sqlInscricao);
-			
-			$connection->closeConnection();
+			$affected_rows2 = $connection->executeCommand($sqlInscricao);
 
-			if ( $affected_rows1 > 0 /*&& $affected_rows2 > 0*/) {
-
+			if ($affected_rows1 > 0 && $affected_rows2 > 0) {
+				$connection->closeConnection();
 				header( "Location: ../CadastroAluno/index.php?msg=Aluno-Cadastro-Com-Sucesso");
 
 			} else {
-
+				$connection->closeConnection();
 				echo 'Error Occurred - SQL';
 
 			}

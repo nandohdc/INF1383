@@ -1,3 +1,34 @@
+<?php
+require_once('/home/grupo320162/public_html/SqlManager.class.php');
+
+//criando conexao
+$connection = new SqlManager("connect");
+
+$sqlContador = "SELECT COUNT(*) AS contador FROM todos_alunos_cpf_cursos_aprovados;";
+
+$result = $connection->executeRead($sqlContador);
+
+if($result){
+	$nLinhas = 0;
+	foreach($result as $row){
+		$nLinhas = $row['contador'];
+	}
+	
+} else{
+	
+	echo "Erro na Consulta - SQL";
+}
+
+//montar a query
+$sql= "SELECT * FROM todos_alunos_cpf_cursos_aprovados;";
+$result2 = $connection->executeRead($sql);
+
+if(!$result2){
+	echo "Erro na Consulta - SQL";
+}
+$connection->closeConnection();
+?>
+
 <script type="text/javascript">
       google.charts.load('current', {'packages':['table']});
       google.charts.setOnLoadCallback(drawTable);

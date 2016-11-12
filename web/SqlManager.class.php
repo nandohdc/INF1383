@@ -1,5 +1,4 @@
 <?php
-
 	/**
 	 * @author João Pedro Pinheiro
 	 * @version 1.0

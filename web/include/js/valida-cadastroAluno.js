@@ -23,12 +23,12 @@ function ValidaCadastroAluno() {
 		msgAlert += _CpfObrigatorio + '\n';
 		ExibeErroMsgSpan('spanErroCpf','labelcpf', _CpfObrigatorio);
 
-	}  else if(!ValidaCpf(cpf)) {
+	}  /*else if(!ValidaCpf(cpf)) {
 
 		msgAlert += _CpfInvalido + '\n';
 		ExibeErroMsgSpan('spanErroCpf','labelcpf', _CpfInvalido);
 
-	}
+	}*/
 	
 	var matricula = document.getElementById('matricula').value;
 

@@ -26,21 +26,13 @@ $sql= "SELECT username, password FROM login WHERE username='$login' AND password
 //envia a query
 $result = $connection->executeRead($sql);
 
-//var_dump($connection);
-//var_dump($result); 
-
 $bool_controle = false;
 foreach($result as $feedback)
 $bool_controle = true;
-	//var_dump($feedback);
-	//var_dump($bobo = $feedback["username"]);
 
 //4º Passo - Verificando se a consulta retornou resultado
 if($bool_controle){
-	//
-	//$name = $feedback['nome']; //inserir de acordo com bd criado
 	$username = $feedback['username']; //inserir de acordo com bd criado
-	//$codUser = $feedback['codUser']; //inserir de acordo com bd criado
 	$StatusLogIn = true;
 } else{
 	$StatusLogIn = false;

@@ -4,7 +4,7 @@ require_once('/home/grupo320162/public_html/SqlManager.class.php');
 //criando conexao
 $connection = new SqlManager("connect");
 
-$sqlContador = "SELECT COUNT(*) AS contador FROM todos_alunos_cpf_cursos_aprovados;";
+$sqlContador = "SELECT COUNT(*) AS contador FROM view_aluno_aprovado_curso;";
 
 $result = $connection->executeRead($sqlContador);
 
@@ -21,7 +21,7 @@ if($result){
 
 
 //montar a query
-$sql= "SELECT * FROM todos_alunos_cpf_cursos_aprovados;";
+$sql= "SELECT * FROM view_aluno_aprovado_curso;";
 $result2 = $connection->executeRead($sql);
 
 if(!$result2){

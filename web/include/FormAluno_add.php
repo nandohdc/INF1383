@@ -255,6 +255,8 @@ if ( isset( $_POST['submit'] ) ) {
 			//montar a query - para tabela aluno
 			$sqlAluno = "INSERT INTO aluno(nome, cpf, identidade, o_emissor, matricula, genero, periodo, dt_nascimento,idioma, nome_curso, rua, complemento, bairro, cidade, uf, cep, telefone_fixo, celular, email) VALUES('$nome', '$cpf', '$identidade', '$o_emissor', '$matricula', '$genero', '$periodo', '$dt_nascimento','$idioma', '$nome_curso', '$rua', '$complemento', '$bairro', '$cidade', '$uf', '$cep', '$telefone_fixo', '$celular','$email')";
 			
+			echo $sqlAluno;
+			
 			//montar a query - para tabela inscricao
 			$sqlInscricao ="INSERT INTO inscricao(dias_disponiveis, turno_disponivel, como_conheceu, status_inscricao, dt_inscricao, nome_projeto, cpf_aluno) VALUES('$dias_disponiveis', '$turno_disponivel', '$como_conheceu','$status_inscricao','$data_inscricao','$nome_projeto','$cpf')";
 

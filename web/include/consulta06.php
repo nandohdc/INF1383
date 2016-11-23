@@ -4,7 +4,7 @@ require_once('/home/grupo320162/public_html/SqlManager.class.php');
 //criando conexao
 $connection = new SqlManager("connect");
 
-$sqlContador = "SELECT COUNT(*) AS contador FROM todos_alunos_cpf_cursos_aprovados;";
+$sqlContador = "SELECT COUNT(*) AS contador FROM aluno;";
 
 $result = $connection->executeRead($sqlContador);
 
@@ -20,7 +20,7 @@ if($result){
 }
 
 //montar a query
-$sql= "SELECT * FROM todos_alunos_cpf_cursos_aprovados;";
+$sql= "SELECT * FROM aluno;";
 $result2 = $connection->executeRead($sql);
 
 if(!$result2){
@@ -35,15 +35,19 @@ $connection->closeConnection();
 
       function drawTable() {
         var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Name');
-        data.addColumn('number', 'Salary');
-        data.addColumn('boolean', 'Full Time Employee');
-        data.addRows([
-          ['Mike',  {v: 10000, f: '$10,000'}, true],
-          ['Jim',   {v:8000,   f: '$8,000'},  false],
-          ['Alice', {v: 12500, f: '$12,500'}, true],
-          ['Bob',   {v: 7000,  f: '$7,000'},  true]
-        ]);
+        data.addColumn('string', 'Nome');
+        data.addColumn('string', 'CPF');
+		data.addColumn('string', 'Curso');
+        data.addRows(<?php echo $nLinhas?>);
+		<?php	  	
+			$i = 0;
+		  	foreach($result2 as $row){?>
+				data.setValue(<?php echo $i ?>, 0, '<?php echo $row["nome"] ?>');
+		  		data.setValue(<?php echo $i ?>, 1, '<?php echo $row["cpf"] ?>');
+		  		data.setValue(<?php echo $i ?>, 2, '<?php echo $row["nome_curso"] ?>');
+		  		<?php
+				$i= $i + 1;
+			}?>
 
         var table = new google.visualization.Table(document.getElementById('table_div'));
 

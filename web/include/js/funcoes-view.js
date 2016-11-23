@@ -2,9 +2,9 @@ function TrataSaida(pIdElemento, obrigatorio) {
 
 	if((gebi(pIdElemento).value == '')&&(obrigatorio)){
 		
-		gebi(pIdElemento).className = 'form-control required';
+		gebi(pIdElemento).className = 'col-xs-8 form-control required';
 	} else {	
-		gebi(pIdElemento).className = 'form-control normal';
+		gebi(pIdElemento).className = 'col-xs-8 form-control normal';
 	}
 
 }//fim do TrataSaida

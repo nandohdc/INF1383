@@ -155,7 +155,7 @@
 			<fieldset>
 				<legend>Informações da Inscrição</legend>
 				<div class="col-xs-10 form-group row">
-					<label for="example-text-input" id="labelnomeprojeto" class="col-xs-3 col-form-label">Nome do Projeto<span class="obrigatorio">*</span></label>
+					<label for="example-text-input" id="labelnomeprojeto" class="col-xs-3 col-form-label">Nome da Instituição<span class="obrigatorio">*</span></label>
 						<div class="col-xs-5">
 							<?php
 								require_once('../SqlManager.class.php');
@@ -179,9 +179,10 @@
 				</div>
 				<div class="col-xs-10 form-group row">
 					<label for="example-text-input" id="labelcomoconheceu" class="col-xs-10 col-form-label">Como Conheceu<span class="obrigatorio">*</span>
-					<textarea class="col-xs-8 form-control" name="como_conheceu" id="como_conheceu" rows="3" maxlength="450"></textarea>
+					<textarea class="col-xs-8 form-control" name="como_conheceu" id="como_conheceu" rows="3" maxlength="450"></textarea></label>
+				</div>
+				<div class="col-xs-10 form-group row">
 					<span>Caracteres restantes: <span id="counter">450</span></span>
-					</label>
 				</div>
 				<div class="col-xs-10 form-group row">
 					<label for="example-checkbox-input" class="col-xs-10 col-form-label">Dias Disponiveis
